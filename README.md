@@ -12,3 +12,6 @@ Steps to build -
 4. npm start / yarn start
 
 enjoy
+
+
+Link to Trello - https://trello.com/b/CpAuZh1D/movienight
