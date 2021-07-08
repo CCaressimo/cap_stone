@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TimeAvailability() {
+export default function Snackbar() {
     return (
         <div>
             
