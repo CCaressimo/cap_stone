@@ -11,5 +11,4 @@ cd into cap_stone/client/
 npm i
 npm start / yarn start
 
-
 Link to Trello - https://trello.com/b/CpAuZh1D/movienight
