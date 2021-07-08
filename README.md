@@ -1,17 +1,17 @@
-# Heading 1 # Movie Night* CapStone Project
+# Movie Night* CapStone Project
 
-## Heading 2 ## About the App -
+## About the App -
 
 This is an app that will take a user's login information. It will allow them to select their streaming services, the amount of time they have available, and a genre they would like to watch. Also, the app will offer the user the option to select restaurants to have meals delivered and generate three random choices from their delivery service area (will work on functionality so that the user can select a specific type of food: ie Mexican, Thai, etc), or they can opt to have the app randomly recommend a snack and/or drink to pair with their experience.
 
-## Heading 2 ##Steps to build client -
+## Steps to build client -
 
 * git clone git@github.com:CCaressimo/cap_stone.git
 * cd into cap_stone/client/
 * npm i
 * npm start / yarn start
 
-## Heading 2 ## Steps to build server -
+## Steps to build server -
 
 * cd into cap_stone/server/
 * npm i 
