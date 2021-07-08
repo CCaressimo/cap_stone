@@ -1,25 +1,29 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import SignIn from "./components/SignIn";
 import Splash from "./components/Splash";
-import TimeAvailability from "./components/TimeAvailability";
+import SelectMovieOrShow from "./components/SelectMovieOrShow";
 import StreamingServices from "./components/StreamingServices";
 import ShowGenre from "./components/ShowGenre";
-import ResturantZip from "./components/ResturantZip";
-import SnacknDrink from "./components/SnacknDrink";
-import ShowResults from "./components/ShowResults";
+import EntertainmentChoices from "./components/EntertainmentChoices";
+import Snackbar from "./components/Snackbar";
+import DeliveryOptions from "./components/DeliveryOptions";
+import StreamingLinks from "./components/StreamingLinks";
 
 const App = () => {
 
   return (
     <BrowserRouter>
       <Switch>
+        <SignIn />
         <Splash />
-        <TimeAvailability />
+        <SelectMovieOrShow />
         <StreamingServices />
         <ShowGenre />
-        <ResturantZip />
-        <SnacknDrink />
-        <ShowResults />
+        <EntertainmentChoices />
+        <Snackbar />
+        <DeliveryOptions />
+        <StreamingLinks />
       </Switch>
     </BrowserRouter>
   )
