@@ -1,4 +1,20 @@
 @font-face {
-    font-family: mexellent;
-    src: url("../Fonts/mexcellent\ rg.otf");
+    font-family: basil;
+    src: url("../Fonts/BasilGothicNbpRegular-KGeA.ttf");
+}
+
+@font-face {
+    font-family: bodacious;
+    src: url("../Fonts/BodaciousDemibold-0ng9.ttf");
+}
+
+@font-face {
+    font-family: data;
+    src: url("../Fonts/WithheldData-wVKz.ttf");
+}
+
+.dataButton {
+    font-family: data !important;
+    font-size: 45px;
+    color: cornsilk;
 }
