@@ -10,3 +10,30 @@
  #599ee9
  #345077
  */
+
+html {
+    background-color: #212b31;
+}
+
+ .signinSize {
+     margin: auto;
+     width: 50%;
+ }
+
+ .signUpStyle {
+    font-size: 20px;
+    color: #0f3aac;
+ }
+ .splashSize {
+     margin: auto;
+     width: 70%;
+     
+ }
+
+ .splashBx {
+     background-color: #0c0b129f;
+ }
+
+ .splashText {
+     color: #EEECE4;
+ }

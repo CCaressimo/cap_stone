@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function DeliveryOptions() {
+export default function BingeAthon() {
     return (
         <div>
             
