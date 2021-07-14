@@ -15,7 +15,7 @@ export default function SignIn() {
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-6">
-                <div className="w-full md:w-1/2 pl-6 pr-3">
+                <div className="">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                     for="grid-password"
