@@ -1,86 +1,46 @@
 import React from "react";
+
 export default function SignUp() {
   return (
     <main className="leading-normal tracking-normal">
-      <section className="relative leading-normal tracking-normal pt-6">
-        <div className="signinSize relative border border-gray-400 rounded-b rounded-t overflow-hidden shadow-lg leading-normal tracking-normal max-w-6xl mx-auto">
-          <form
-            onSubmit="*"
-            className="splashBx mx-auto text-center break-normal"
-          >
-            <div className="w-full m-0 p-12 bg-cover bg-bottom">
-              <div className="mx-auto text-center break-normal">
-                <p className="headerText shadow-inner font-bold text-3xl md:text-5xl">
-                  Sign up
-                </p>
-              </div>
+      <section class="grid min-h-screen place-items-center">
+        <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
+          <form action="">
+            <div class="text-center mb-10">
+            <h1 class="font-bold text-3xl text-gray-900">REGISTER</h1>
+
             </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full md:w-1/2 pl-6 pr-3">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-first-name"
-                ></label>
-                <input
-                  className="appearance-none block w-full bg-white text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name"
-                  type="text"
-                  placeholder="First Name"
-                  name="first name"
-                />
-              </div>
-              <div className="w-full md:w-1/2 pr-6 pl-3">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-last-name"
-                ></label>
-                <input
-                  className="appearance-none block w-full bg-white text-gray-700 border border-gray-800 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-last-name"
-                  type="text"
-                  placeholder="Last Name"
-                  name="last name"
-                />
-              </div>
+            <hr />
+            <div class="flex justify-between gap-3">
+              <span class="w-1/2">
+                <label for="firstname" class="text-lg font-semibold px-5">Firstname</label>
+                <input id="firstname" type="text" name="firstname" placeholder="John" autocomplete="given-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required=""></input>
+              </span>
+              <span class="w-1/2">
+                <label for="lastname" class="text-lg font-semibold px-5">Lastname</label>
+                <input id="lastname" type="text" name="lastname" placeholder="Doe" autocomplete="family-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required=""></input>
+              </span>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full md:w-1/2 pl-6 pr-3">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-password"
-                ></label>
-                <input
-                  className="appearance-none block w-full bg-white text-gray-700 border border-gray-800 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="email"
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                />
-              </div>
-              <div className="w-full md:w-1/2 pr-6 pl-3">
-                <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-last-name"
-                ></label>
-                <input
-                  className="appearance-none block w-full bg-white text-gray-700 border border-gray-800 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-last-name"
-                  type="password"
-                  placeholder="Password"
-                  name="password"
-                />
-              </div>
+            <div>
+              <label htmlFor="email" class="text-lg font-semibold "><h1>email</h1> </label> 
+              <input type="text" placeholder ='Enter Email' name="email" class="w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required />  
+
+              <label htmlFor="psw" class="text-lg font-semibold "><h1>password</h1> </label> 
+              <input type="Password" placeholder="Enter Password" name="psw" id="psw" class="w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required/>
+              
+              <label htmlFor="psw-repeat" class="text-lg font-semibold "><h1>Repeat password</h1> </label> 
+              <input type="Password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" class=" w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" required/>
+              <hr />
+              <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+             
+              <button type="submit" class=" w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">Sign up</button>
+
             </div>
-            <div className="text-center pb-6">
-              <button
-                className="headerText nextButton text-2xl py-2 px-4 border border-gray-200 rounded shadow"
-                type="submit"
-                value="Send"
-              >
-                Log in
-              </button>
-            </div>
-          </form>
+              <p class="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black"><a href="#">Already registered?</a></p>
+
+            </form>
+           
+          
         </div>
       </section>
     </main>
