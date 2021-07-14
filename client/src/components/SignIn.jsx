@@ -14,7 +14,7 @@ export default function SignIn() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="">
                 <div className="">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
