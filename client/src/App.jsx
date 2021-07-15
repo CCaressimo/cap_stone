@@ -4,9 +4,7 @@ import { BrowserRouter, Route, Switch} from "react-router-dom";
 import SignIn from "./components/SignIn.jsx";
 import SignUp from "./components/SignUp.jsx";
 import Splash from "./components/Splash.jsx";
-import FlixsNFair from "./components/FlixsNFair";
-import Snackbar from "./components/Snackbar.jsx";
-
+import FlixNFair from "./components/FlixNFair";
 
 const App = () => {
 
@@ -16,8 +14,7 @@ const App = () => {
         <Route component={SignIn} path="/" exact />
         <Route component={SignUp} path="/signup" exact />
         <Route component={Splash} path="/home" />
-        <Route component={FlixsNFair} path="/FlixsNFair" />
-        <Route component={Snackbar} path="/snackbar" />
+        <Route component={FlixNFair} path="/FlixNFair" />
       </Switch>
     </BrowserRouter>
   );
