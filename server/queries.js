@@ -19,7 +19,7 @@ const getFares = (request, response) => {
 }
 
 const getFaresByGenre = (request, response) => {
-  pool.query("SELECT farename, imgurl FROM fares WHERE genre = 'Horror'", (error, results) => {
+  pool.query("(SELECT farename, imgurl FROM fares WHERE genre = 'Adventure' LIMIT 1) UNION (SELECT drinkname, imgurl FROM drinks WHERE genre = 'Adventure' LIMIT 1)", (error, results) => {
     if (error) {
       throw error
     }
