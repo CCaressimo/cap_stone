@@ -19,7 +19,13 @@ const getFares = (request, response) => {
 }
 
 const getFaresByGenre = (request, response) => {
-  pool.query("SELECT farename, imgurl FROM fares WHERE genre = 'Horror'", (error, results) => {
+
+
+  let {genre} = request.params
+
+  console.log(genre)
+
+  pool.query(`SELECT farename, imgurl FROM fares WHERE genre = '${genre}'`, (error, results) => {
     if (error) {
       throw error
     }
