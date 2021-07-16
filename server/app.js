@@ -24,7 +24,7 @@ res.send('Express application working ...');
 
 app.get('/fares', db.getFares)
 
-//app.get('/fares/:genre', db.getFaresByGenre)
+
 
 app.get("/fares/:genre", db.getFaresByGenre)
 
