@@ -9,6 +9,8 @@ import FlixNFair from "./components/FlixNFair";
 const App = () => {
 
   return (
+
+
     <BrowserRouter>
       <Switch>
         <Route component={SignIn} path="/" exact />
