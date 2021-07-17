@@ -1,39 +1,17 @@
 /* colors
- #d8a663
- #0f3aac
- #0c0b12
- #6e3228
- #092464
- #eeece4
- #351c18
- #981713
- #599ee9
- #345077
+#08100e
+#339e81
+#a34134
+#266e9f
+#b3b569
+#34665c
+#143126
+#122a5a
+#5d251f
+#229c39
+
  */
 
 html {
-    background-color: #212b31;
+    background-color: #000c0a;
 }
-
- .signinSize {
-     margin: auto;
-     width: 50%;
- }
-
- .signUpStyle {
-    font-size: 20px;
-    color: #0f3aac;
- }
- .splashSize {
-     margin: auto;
-     width: 70%;
-     
- }
-
- .splashBx {
-     background-color: #0c0b129f;
- }
-
- .splashText {
-     color: #EEECE4;
- }
