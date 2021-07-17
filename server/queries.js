@@ -33,7 +33,21 @@ const getFaresByGenre = (request, response) => {
   })
 }
 
+const postSignUp = (req, res) => {
+    console.log(req.body);
+      //let {email, password} = req.body
+      const email = req.body.email;
+      const password = req.body.password;
+
+    console.log(email);
+    pool.query('INSERT INTO userss (email, password) VALUES ($1, $2)', [email, password])
+    .then(() =>{
+           res.json('SUCCESS')
+    })   
+}
+
 module.exports = {
   getFares,
   getFaresByGenre,
+  postSignUp,
 }
