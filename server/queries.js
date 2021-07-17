@@ -76,9 +76,7 @@ const getFlixByGenre = (request, response) => {
   let {mediatype, streaming_source} = request.query
 
   
-  console.log(genre);
-  console.log(mediatype);
-  console.log(streaming_source);
+ 
 
 
 
