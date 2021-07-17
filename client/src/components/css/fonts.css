@@ -16,11 +16,28 @@
 .dataButton {
     font-family: data !important;
     font-size: 45px;
-    color: cornsilk;
+    color: #339e81;
+    text-shadow: 2px 1px 14px #34665c;
+    transition: .4s;
+}
+
+.dataButton:hover {
+    color: #266e9f;
+    transition: .4s;
+    text-shadow: 2px 1px 14px #266e9f;
 }
 
 .textFont {
     font-family: guru !important;
     font-size: 37px;
-    color: burlywood;
+    color: #34665c;
+    text-shadow: 2px 1px 14px #b3b569;
+}
+
+.dataText {
+    font-family: data !important;
+    font-size: 45px;
+    color: #339e81;
+    text-shadow: 2px 1px 14px #34665c;
+    transition: .4s;
 }

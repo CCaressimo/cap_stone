@@ -30,13 +30,15 @@ export default function Splash() {
               <img
               src={Retro}
               alt="Retro flixs n fairs"
-              className="pb-12"
+              className="border border-green-500 border-opacity-100 rounded"
             />
-            <div className="">
-              <p className="textFont subText text-xs md:text-2xl text-center">
+            <br/>
+            <br/>
+            <div className="border border-green-500 border-opacity-100 rounded">
+              <p className="textFont subText text-xs md:text-2xl text-center pt-2">
                 Hungry for that Gen-X childhood vibe?
               </p>
-              <p className="textFont subText text-xs md:text-2xl text-center">
+              <p className="textFont subText text-xs md:text-2xl text-center pb-2">
                 Well let's watch some good ol movies and shows!
               </p>
             </div>
@@ -44,7 +46,7 @@ export default function Splash() {
             <div className="text-center py-12">
               <NavLink 
                 to="/FlixNFair"
-                className="dataButton text-2xl py-2 px-4 shadow"
+                className="dataButton text-xs md:text-2xl py-2 px-4 shadow border border-green-500 border-opacity-100 rounded" 
               >
                 Let's get started
               </NavLink>
@@ -52,7 +54,7 @@ export default function Splash() {
               <img
               src={Movie}
               alt="Movie poster"
-              className="border rounded-t rounded-b"
+              className="border border-green-500 border-opacity-100 rounded"
             />
         </div>
       </section>
