@@ -1,6 +1,6 @@
 @font-face {
-    font-family: basil;
-    src: url("../Fonts/BasilGothicNbpRegular-KGeA.ttf");
+    font-family: guru;
+    src: url("../Fonts/GuruMeditationNbp-GynZ.ttf");
 }
 
 @font-face {
@@ -17,4 +17,10 @@
     font-family: data !important;
     font-size: 45px;
     color: cornsilk;
+}
+
+.textFont {
+    font-family: guru !important;
+    font-size: 37px;
+    color: burlywood;
 }
