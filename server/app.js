@@ -8,8 +8,8 @@ const { snack, sequelize } = require("./models");
 const es6Renderer = require("express-es6-template-engine");
 const bodyParser = require('body-parser')
 
-
-
+var jsonParser = bodyParser.json();
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use(helmet());
 app.use(express.json());
 app.use(cors())
@@ -33,6 +33,7 @@ app.get("/fares/:genre", db.getFaresByGenre)
 app.get('/flix', db.getFlix)
 
 app.get("/flix/:genre", db.getFlixByGenre)
+app.post("/register", jsonParser, db.postSignUp)
 
 
 // Start server
