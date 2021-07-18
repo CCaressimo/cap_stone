@@ -7,12 +7,9 @@
   "description": "Retro movie and show generator",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm install && node app.js",
-    "heroku-postbuild": "cd .. && cd client && npm install && npm run build",
     "start": "node app.js",
-    "client": "cd client && npm start",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

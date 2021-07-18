@@ -8,6 +8,8 @@ const { snack, sequelize } = require("./models");
 const es6Renderer = require("express-es6-template-engine");
 const bodyParser = require('body-parser')
 
+require('dotenv').config()
+
 var jsonParser = bodyParser.json();
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 app.use(helmet());
@@ -38,6 +40,6 @@ app.post("/register", jsonParser, db.postSignUp)
 
 
 // Start server
-app.listen(8080, () => console.log('server running ...'))
+app.listen(process.env.PORT || 8080, () => console.log('server running ...'))
 
 module.exports = app;

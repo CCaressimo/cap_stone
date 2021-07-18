@@ -1,1 +1,1 @@
-web: (cd ./server && npm install && node app.js && cd .. && cd client && npm install && npm run build)
+web: (cd ./server && npm install && node app.js)
