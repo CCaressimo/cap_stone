@@ -1,0 +1,28 @@
+*{
+    background-color: #000C0A;
+}
+.dataButton {
+    font-family: data !important;
+    font-size: 45px;
+    color: #339E81;
+    text-shadow: 2px 1px 14px #34665C;
+    transition: .4s;
+}
+.dataButton:hover {
+    color: #266E9F;
+    transition: .4s;
+    text-shadow: 2px 1px 14px #266E9F;
+}
+.textFont {
+    font-family: guru !important;
+    font-size: 37px;
+    color: #34665C;
+    text-shadow: 2px 1px 14px #B3B569;
+}
+.dataText {
+    font-family: data !important;
+    font-size: 45px;
+    color: #339E81;
+    text-shadow: 2px 1px 14px #34665C;
+    transition: .4s;
+}
