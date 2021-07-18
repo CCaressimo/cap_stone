@@ -26,13 +26,14 @@ app.get('/fares', db.getFares)
 
 app.get('/drinks', db.getDrinks)
 
-app.get("/drinks/:genre", db.getDrinksByGenre)
+app.get("/drinks/:genre", db.getDrinksByGenre);
 
-app.get("/fares/:genre", db.getFaresByGenre)
+app.get("/fares/:genre", db.getFaresByGenre);
 
 app.get('/flix', db.getFlix)
 
-app.get("/flix/:genre", db.getFlixByGenre)
+app.get("/flix/:genre", db.getFlixByGenre);
+
 app.post("/register", jsonParser, db.postSignUp)
 
 
