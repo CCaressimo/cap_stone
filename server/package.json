@@ -8,9 +8,14 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && npm run build",
+    "install": "npm run install:client && npm run install:server",
+    "install:client": "(cd ./client && npm install)",
+    "install:server": "(cd ./server && npm install)",
+    "start": "npm run start:dev",
+    "start:dev": "npm run start:client & npm run start:server",
+    "start:client": "(cd ./client && npm run start)",
+    "start:server": "(cd ./server && npm run start:watch)",
     "heroku-postbuild": "cd client && npm install && npm run build",
-    "start": "node app.js",
     "client": "cd client && npm start",
     "dev": "nodemon app.js"
   },
