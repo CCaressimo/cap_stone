@@ -14,4 +14,14 @@
 
 html {
     background-color: #000c0a;
+    height: 100%;
+}
+
+body {
+    background-image: url("../Images/retrobackground.png");
+    background-repeat: repeat-;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
 }

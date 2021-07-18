@@ -6,7 +6,7 @@ import "./css/Background.css";
 import "./css/fonts.css"
 
 import Retro from './Images/retro.png'
-import Movie from './Images/movie.jpg'
+import Movie from './Images/moviePoster.jpg'
 
 
 export default function Splash() {
@@ -26,7 +26,7 @@ export default function Splash() {
       <animated.div className="App" style={fade}>
       <section className="relative">
         <div className="py-12 md:py-8 px-6 max-w-6xl mx-auto" >
-          <div className="w-full overflow-y-hidden px-4">
+          <div className="w-full overflow-y-hidden">
               <img
               src={Retro}
               alt="Retro flixs n fairs"
