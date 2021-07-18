@@ -28,12 +28,8 @@ const getDrinks = (request, response) => {
 }
 
 const getDrinksByGenre = (request, response) => {
-
-  
   let {genre} = request.params
-
   console.log(genre)
-
   pool.query(`SELECT * FROM drinks WHERE genre = '${genre}'`, (error, results) => {
     if (error) {
       throw error
@@ -46,12 +42,8 @@ const getDrinksByGenre = (request, response) => {
 
 
 const getFaresByGenre = (request, response) => {
-
-  
   let {genre} = request.params
-
   console.log(genre)
-
   pool.query(`SELECT farename, imgurl FROM fares WHERE genre = '${genre}'`, (error, results) => {
     if (error) {
       throw error
@@ -70,15 +62,8 @@ const getFlix = (request, response) => {
 }
 
 const getFlixByGenre = (request, response) => {
-
-  
   let {genre} = request.params
   let {mediatype, streaming_source} = request.query
-
-  
- 
-
-
 
   pool.query(`SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' AND streaming_source = '${streaming_source}'`  , (error, results) => {
     if (error) {
