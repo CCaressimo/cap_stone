@@ -1,5 +1,6 @@
 const Pool = require('pg').Pool;
 const bodyParser = require('body-parser')
+const bcrypt = require('bcrypt')
 
 const pool = new Pool({
   user: "frasbvsc",
@@ -30,21 +31,21 @@ const getDrinks = (request, response) => {
 const getDrinksByGenre = (request, response) => {
   let {genre} = request.params
   console.log(genre)
-  pool.query(`SELECT * FROM drinks WHERE genre = '${genre}'`, (error, results) => {
-    if (error) {
-      throw error
+  pool.query(
+    `SELECT * FROM drinks WHERE genre = '${genre}' ORDER BY random() limit 2`,
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+      response.status(200).json(results.rows);
     }
-    response.status(200).json(results.rows)
-  })
+  );
 }
-
-
-
 
 const getFaresByGenre = (request, response) => {
   let {genre} = request.params
   console.log(genre)
-  pool.query(`SELECT farename, imgurl FROM fares WHERE genre = '${genre}'`, (error, results) => {
+  pool.query(`SELECT farename, imgurl FROM fares WHERE genre = '${genre}' ORDER BY random() limit 3`, (error, results) => {
     if (error) {
       throw error
     }
@@ -61,35 +62,81 @@ const getFlix = (request, response) => {
   })
 }
 
-const getFlixByGenre = (request, response) => {
+let getFlixByGenre = (request, response) => {
   let {genre} = request.params
   let {mediatype, streaming_source} = request.query
-
-  pool.query(`SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' AND streaming_source = '${streaming_source}'`  , (error, results) => {
-    if (error) {
-      throw error
+  pool.query(
+    `SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' AND streaming_source = '${streaming_source}' ORDER BY random() limit 5`,
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+      response.status(200).json(results.rows);
     }
-    response.status(200).json(results.rows)
-  })
+  );
 }
 
-const postSignUp = (req, res) => {
+// `SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' AND streaming_source = '${streaming_source}'`
+
+// `SELECT * genre, mediatype, streaming_source FROM flix (CASE WHEN genre AND mediatype AND streaming_source IS NOT NULL THEN SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' AND streaming_source = '${streaming_source}' WHEN genre AND mediatype IS NOT NULL AND streaming_source IS NULL THEN SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' WHEN genre IS NULL AND mediatype AND streaming_source IS NOT NULL THEN SELECT * FROM flix WHERE mediatype = '${mediatype}' AND streaming_source = '${streaming_source}' END)`;
+
+// const getFlixByMedia = (request, response) => {
+//   let { genre } = request.params;
+//   let { mediatype } = request.query;
+//   pool.query(
+//     `SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}'`,
+//     (error, results) => {
+//       if (error) {
+//         throw error;
+//       }
+//       response.status(200).json(results.rows);
+//     }
+//   );
+// };
+
+// const getFlixBySource = (request, response) => {
+//   let { mediatype } = request.params;
+//   let { streaming_source } = request.query;
+//   pool.query(
+//     `SELECT * FROM flix WHERE mediatype = '${mediatype}' AND streaming_source = '${streaming_source}'`,
+//     (error, results) => {
+//       if (error) {
+//         throw error;
+//       }
+//       response.status(200).json(results.rows);
+//     }
+//   );
+// };
+
+const postSignUp = async (req, res) => {
   console.log(req.body);
-    //let {email, password} = req.body
-    const email = req.body.email;
-    const password = req.body.password;
+  try {
+    const { emailReg } = req.body;
+    const { passwordReg } = req.body;
+    const { firstName } = req.body;
+    const { lastName } = req.body;
+    const newRegister = await pool.query(
+      "INSERT INTO userss (email, password, firstname, lastname) VALUES ($1, $2, $3, $4)",
+      [emailReg, passwordReg, firstName, lastName]
+    );
+    res.json(newRegister.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
+};
 
-  console.log(email);
-  pool.query('INSERT INTO userss (email, password) VALUES ($1, $2)', [email, password])
-  .then(() =>{
-         res.json('SUCCESS')
-  })   
-}
+// const postSignUp = (req, res) => {
+//   console.log(req.body);
+//     //let {email, password} = req.body
+//     const { emailReg } = req.body;
+//     const { passwordReg } = req.body;
+//   console.log({emailReg});
+//   pool.query('INSERT INTO userss (email, password) VALUES ($1, $2)', [emailReg, passwordReg])
+//   .then(() =>{
+//          res.json('SUCCESS')
+//   })
+// }
  
-
-  
-
-
 module.exports = {
   getFares,
   getFaresByGenre,
@@ -97,7 +144,8 @@ module.exports = {
   getDrinksByGenre,
   getFlix,
   getFlixByGenre,
-  postSignUp
-}
+  postSignUp,
+};
 
-
+  // getFlixByMedia,
+  // getFlixBySource,

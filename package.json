@@ -1,23 +1,6 @@
 {
-  "name": "cap_stone",
-  "engines": {
-    "node": "14.16.0"
-  },
-  "version": "1.0.0",
-  "description": "To install dependencies for React:",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-prebuild": "cd client && npm install && npm run-script build && mv build ../server/ && cd ../server && npm install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CCaressimo/cap_stone.git"
-  },
   "dependencies": {
     "axios": "^0.21.1",
     "netlify-cli": "^4.4.2"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }

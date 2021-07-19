@@ -1,59 +1,65 @@
-import React, { useState, useContext } from "react";
-import Axios from 'axios'
-
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+//import Axios from 'axios'
 
 export default function SignUp() {
-
   const [emailReg, setEmail] = useState("");
   const [passwordReg, setPassword] = useState("");
-
-  const register = () => {
-      Axios.post ("http://localhost8080/register", {email: emailReg, password: passwordReg}).then((response)=> {
-
-        console.log(response)
-
-      });
-    };
-
-
+  const [firstName, setFirstName] =  useState("");
+  const [lastName, setLastName] = useState("");
+  const onSubmitForm = async e => {
+      e.preventDefault();
+      try {
+        const body = { emailReg, passwordReg, firstName, lastName }
+        const response = await fetch ("http://localhost:8080/register", {
+        method: "POST",
+        headers: {"Content-Type": "application/json" },
+        body: JSON.stringify(body)
+        });
+          console.log(response);
+      } catch (err) {
+          console.error(err.message);
+      }
+  };
+  // const register = () => {
+  //     Axios.post ("http://localhost8080/register", {email: emailReg, password: passwordReg}).then((response)=> {
+  //       console.log(response)
+  //     });
+  //   };
   return (
     <main className="leading-normal tracking-normal">
-      <section class="grid min-h-screen place-items-center">
-        <div class="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
-          <form action="">
-            <div class="text-center mb-10">
-            <h1 class="font-bold text-3xl text-gray-900">REGISTER</h1>
+      <section className="relative">
+        <div className="py-48 md:py-60 px-6 max-w-2xl mx-auto">
+          <form action="" onSubmit={onSubmitForm} className="border border-green-500 border-opacity-100 rounded p-12">
+            <div className="text-center mb-10">
+            <h1 className="textFont text-4xl md:text-6xl">REGISTER</h1>
             </div>
             <hr />
-            <div class="flex justify-between gap-3">
-              <span class="w-1/2">
-                <label for="firstname" class="text-lg font-semibold px-5">Firstname</label>
-                <input id="firstname" type="text" name="firstname" placeholder="John" autocomplete="given-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"></input>
+            <div className="flex justify-between gap-3">
+              <span className="w-1/2 pt-2">
+                <label htmlFor="firstname" className="text-2xl textFont px-5">Firstname</label>
+                <input id="firstname" type="text" name="firstname" onChange={e => setFirstName(e.target.value)} value={firstName} placeholder="John" autoComplete="given-name" className="textFont2 text-lg bg-blue-400 bg-opacity-70 border border-green-500 border-opacity-100 rounded block w-full p-3 mt-2"></input>
               </span>
-              <span class="w-1/2">
-                <label for="lastname" class="text-lg font-semibold px-5">Lastname</label>
-                <input id="lastname" type="text" name="lastname" placeholder="Doe" autocomplete="family-name" class="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" ></input>
+              <span className="w-1/2 pt-2">
+                <label htmlFor="lastname" className="text-2xl textFont px-5">Lastname</label>
+                <input id="lastname" type="text" name="lastname" onChange={e => setLastName(e.target.value)} value={lastName} placeholder="Doe" autoComplete="family-name" className="textFont2 text-lg bg-blue-400 bg-opacity-70 border border-green-500 border-opacity-100 rounded block w-full p-3 mt-2"></input>
               </span>
             </div>
             <div>
-              <label htmlFor="email" class="text-lg font-semibold "><h1>email</h1> </label> 
-              <input type="text" placeholder ='Enter Email' onChange={(e) => {
-                
-                setEmail(e.target.value);
-
-              }} name="email" class="w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" />  
-              <label htmlFor="psw" class="text-lg font-semibold "><h1>password</h1> </label> 
-              <input type="Password" placeholder="Enter Password" onChange={(e) => {
-                
-                setPassword(e.target.value);
-
-              }} class="w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner" />
-            
-              <hr />
-              <p>By creating an account you agree to our Terms & Privacy.</p>
-              <button onClick={register} type="submit"  class=" w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-black shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none">Sign up</button>
+              <label htmlFor="email" className="text-2xl textFont"><h1 className="pt-2">Email</h1> </label>
+              <input type="text" placeholder ='Enter Email' onChange={e => setEmail(e.target.value)} name="email" value={emailReg} className="textFont2 text-lg bg-blue-400 bg-opacity-70 border border-green-500 border-opacity-100 rounded block w-full p-3 mt-2"/>
+              <label htmlFor="psw" className="text-2xl textFont"><h1 className="pt-2">Password</h1> </label>
+              <input type="Password" placeholder="Enter Password" onChange={e => setPassword(e.target.value)} className="textFont2 text-lg bg-blue-400 bg-opacity-70 border border-green-500 border-opacity-100 rounded block w-full p-3 mt-2 mb-4"/>
+              <hr/>
+              {/* <p>By creating an account you agree to our Terms & Privacy.</p> */}
+              <div className="text-center pt-6">
+                <button type="submit"  className=" dataButton text-lg md:text-2xl py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">Sign up</button>
+              </div>
             </div>
-              <p class="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">Already registered?</p>
+              <NavLink 
+                to="/" className="textFont flex justify-between inline-block mt-4 text-xs  cursor-pointer hover:text-black">
+                  Already registered?
+                </NavLink>
             </form>
         </div>
       </section>

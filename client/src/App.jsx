@@ -15,8 +15,8 @@ const App = () => {
       <Switch>
         <Route component={SignIn} path="/" exact />
         <Route component={SignUp} path="/signup" exact />
-        <Route component={Splash} path="/home" />
-        <Route component={FlixNFair} path="/FlixNFair" />
+        <Route component={Splash} path="/home" exact />
+        <Route component={FlixNFair} path="/FlixNFair" exact />
       </Switch>
     </BrowserRouter>
   );

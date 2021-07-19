@@ -14,4 +14,24 @@
 
 html {
     background-color: #000c0a;
+    height: 100%;
+}
+
+body {
+    background-image: url("../Images/retrobackground.png");
+    background-repeat: repeat-;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+}
+
+.moviePoster {
+    width: 400px;
+    height: 600px;
+}
+
+.faresPoster {
+    width: 300px;
+    height: 250px;
 }
