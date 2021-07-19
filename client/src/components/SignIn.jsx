@@ -1,40 +1,43 @@
 import React from 'react'
+import { NavLink } from "react-router-dom";
 import "./css/Background.css"
 
 export default function SignIn() {
     return (
       <main className="leading-normal tracking-normal">
-        <section className="relative leading-normal tracking-normal pt-6">
-          <div className="signinSize relative border border-gray-400 rounded-b rounded-t overflow-hidden shadow-lg leading-normal tracking-normal max-w-6xl mx-auto">
-            <form onSubmit="*" className="splashBx mx-auto text-center">
+        <section className="relative">
+          <div className="py-48 md:py-60 px-6 max-w-2xl mx-auto">
+            <form onSubmit="*" className="border border-green-500 border-opacity-100 rounded">
               <div className="w-full m-0 p-12 bg-cover">
                 <div className="max-w-4xl mx-auto text-center break-normal">
-                  <p className="headerText shadow-inner font-bold text-3xl md:text-5xl">
+                  <p className="textFont text-4xl md:text-6xl text-center pt-2">
                     Sign In
                   </p>
                 </div>
               </div>
               <div className="flex flex-wrap -mx-3 mb-6">
-                <div className="w-full md:w-1/2 pl-6 pr-3">
+                <div className="w-full md:w-1/2 px-12 md:pl-12 md:pr-4">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                     htmlFor="grid-password"
                   ></label>
+                  <label htmlFor="email" className="text-2xl textFont"><h1 className="pt-2">Email</h1> </label>
                   <input
-                    className="appearance-none block w-full bg-white text-gray-700 border border-gray-800 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    className="textFont2 text-lg bg-blue-400 bg-opacity-70 border border-green-500 border-opacity-100 rounded block w-full p-3 mt-2"
                     id="email"
                     type="email"
                     placeholder="Email"
                     name="email"
                   />
                 </div>
-                <div className="w-full md:w-1/2 pr-6 pl-3">
+                <div className="w-full md:w-1/2 px-12 md:pr-12 md:pl-4">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                     htmlFor="grid-last-name"
                   ></label>
+                  <label htmlFor="psw" className="text-2xl textFont"><h1 className="pt-2">Password</h1> </label>
                   <input
-                    className="appearance-none block w-full bg-white text-gray-700 border border-gray-800 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    className="textFont2 text-lg bg-blue-400 bg-opacity-70 border border-green-500 border-opacity-100 rounded block w-full p-3 mt-2"
                     id="grid-last-name"
                     type="password"
                     placeholder="Password"
@@ -42,19 +45,20 @@ export default function SignIn() {
                   />
                 </div>
               </div>
-              <div className="pb-6">
-                <a href="/" className="signUpStyle">
+              <div className="text-center pb-6">
+                <a href="/signup" className="dataButton text-xs md:text-md py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">
                   Not signed up?
                 </a>
               </div>
               <div className="text-center pb-6">
-                <button
-                  className="headerText nextButton text-2xl py-2 px-4 border border-gray-200 rounded shadow"
+                <NavLink
+                  to="./home"
+                  className="dataButton text-lg md:text-2xl py-2 px-4 shadow border border-green-500 border-opacity-100 rounded"
                   type="submit"
                   value="Send"
                 >
                   Log in
-                </button>
+                </NavLink>
               </div>
             </form>
           </div>

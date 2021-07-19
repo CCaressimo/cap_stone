@@ -34,6 +34,13 @@
     text-shadow: 2px 1px 14px #b3b569;
 }
 
+.textFont2 {
+    font-family: guru !important;
+    font-size: 37px;
+    color: #94afaa;
+    text-shadow: 2px 1px 14px #b3b569;
+}
+
 .dataText {
     font-family: data !important;
     font-size: 45px;

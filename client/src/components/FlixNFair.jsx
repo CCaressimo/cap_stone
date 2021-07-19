@@ -107,10 +107,18 @@ function FlixNFair() {
             <animated.div className="App" style={fade}>
                 <section className="relative">
                     <div className="lg:flex justify-start max-w-6xl mx-auto">
-                        <div className="py-12 md:pt-8 px-6" >
+                        <div className="pb-12 md:pt-8 px-6" >
                             <div className="w-full overflow-y-hidden">
+                                <div className="py-6">
+                                    <NavLink 
+                                        to="/"
+                                        className="dataButton text-xs md:text-2xl py-2 px-4 shadow border border-green-500 border-opacity-100 rounded" 
+                                    >
+                                        Sign Out
+                                    </NavLink>
+                                </div>
                                 <NavLink 
-                                to="/"
+                                to="/home"
                                 className=""
                                 >
                                     <img
@@ -171,13 +179,13 @@ function FlixNFair() {
                                             <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
                                                 <div className="flex-1 rounded overflow-hidden shadow-lg flex h-screen justify-center items-center">
                                                     <div className="">
-                                                        <img src={flix.poster_url} alt=" Movie Poster" className="w-80 object-cover rounded-lg shadow-md " />    
-                                                        <div className="relative px-4 max-w-md">
+                                                        <img src={flix.poster_url} alt="Movie Poster" className="moviePoster object-cover rounded-lg shadow-md " />    
+                                                        <div className="relative px-4 max-w-sm">
                                                             <div className="bg-blue-400  bg-opacity-75 rounded-lg shadow-lg">
-                                                                <div className="mt-1 text-2xl md:text-3xl text-center textFont px-6">
+                                                                <div className="mt-1 text-2xl md:text-3xl text-center textFont2 px-6">
                                                                     {flix.title}
                                                                 </div>
-                                                                <div className="mt-1 text-xl md:text-2xl textFont text-right">
+                                                                <div className="mt-1 text-xl md:text-2xl textFont2 text-right">
                                                                     {flix.release_date}
                                                                 </div>
                                                             </div>
@@ -253,10 +261,10 @@ function FlixNFair() {
                                            <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
                                                 <div className="flex-1 rounded overflow-hidden shadow-lg flex h-screen justify-center items-center">
                                                     <div className="">
-                                                        <img src={fare.imgurl} alt=" Movie Poster" className="h-72 w-72 object-cover rounded-lg shadow-md " />    
-                                                        <div className="relative max-w-md">
+                                                        <img src={fare.imgurl} alt="fares" className="faresPoster object-cover rounded-lg shadow-md " />    
+                                                        <div className="relative max-w-sm">
                                                             <div className="bg-red-400 bg-opacity-75 rounded-lg shadow-lg">
-                                                                <div className="mt-1 text-2xl md:text-2xl text-center textFont px-6 mb-5">
+                                                                <div className="mt-1 text-lg md:text-2xl text-center textFont px-6 mb-5">
                                                                     {fare.farename}
                                                                 </div>
                                                             </div>
@@ -274,10 +282,10 @@ function FlixNFair() {
                                             <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
                                                 <div className="flex-1 rounded overflow-hidden shadow-lg flex h-screen justify-center items-center">
                                                     <div className="">
-                                                        <img src={drink.imgurl} alt=" Movie Poster" className="h-72 w-72 object-cover rounded-lg shadow-md " />    
-                                                        <div className="relative max-w-md">
+                                                        <img src={drink.imgurl} alt="drinks" className="faresPoster object-cover rounded-lg shadow-md " />    
+                                                        <div className="relative max-w-sm">
                                                             <div className="bg-red-400 rounded-lg shadow-lg">
-                                                                <div className="mt-1 text-2xl md:text-2xl text-center textFont px-6 mb-5">
+                                                                <div className="mt-1 text-lg md:text-2xl text-center textFont px-6 mb-5">
                                                                     {drink.drinkname}
                                                                 </div>
                                                             </div>

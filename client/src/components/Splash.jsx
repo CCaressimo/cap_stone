@@ -56,6 +56,14 @@ export default function Splash() {
               alt="Movie poster"
               className="border border-green-500 border-opacity-100 rounded"
             />
+            <div className="text-center py-12">
+              <NavLink 
+                to="/"
+                className="dataButton text-xs md:text-2xl py-2 px-4 shadow border border-green-500 border-opacity-100 rounded" 
+              >
+                Sign Out
+              </NavLink>
+            </div>
         </div>
       </section>
       </animated.div>
