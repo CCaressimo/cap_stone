@@ -16,9 +16,9 @@ app.use(helmet());
 app.use(express.json());
 app.use(cors())
 
-app.get('/', function (req, res) {
-res.send('Express application working ...');
-});
+// app.get('/', function (req, res) {
+// res.send('Express application working ...');
+// });
 
 app.get('/fares', db.getFares)
 
@@ -47,7 +47,7 @@ if (process.env.NODE_ENV === "production") {
 } else {
   // If we aren't in production
   app.get("/", (req, res) => {
-    res.send("API is running...");
+    res.send("Express application working ...");
   });
 }
 
