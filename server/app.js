@@ -16,11 +16,6 @@ app.use(helmet());
 app.use(express.json());
 app.use(cors())
 
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('tiny'));
-  app.use(express.static('client/build'))
-}
-
 app.get('/', function (req, res) {
 res.send('Express application working ...');
 });
@@ -42,6 +37,19 @@ app.get("/flix/:genre", db.getFlixByGenre);
 // app.get("/flix/:mediatype", db.getFlixBySource);
 
 app.post("/register", jsonParser, db.postSignUp)
+
+if (process.env.NODE_ENV === "production") {
+  app.use(morgan("tiny"));
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) =>
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
+  );
+} else {
+  // If we aren't in production
+  app.get("/", (req, res) => {
+    res.send("API is running...");
+  });
+}
 
 
 // Start server

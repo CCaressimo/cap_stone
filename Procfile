@@ -1,1 +1,1 @@
-web: (cd ./server && npm install && node app.js)
+web: node server/app.js

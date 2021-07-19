@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b0fef119.chunk.css",
+    "main.js": "/static/js/main.53566a18.chunk.js",
+    "main.js.map": "/static/js/main.53566a18.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.695f7b2b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.695f7b2b.js.map",
+    "static/js/2.b6a9e35a.chunk.js": "/static/js/2.b6a9e35a.chunk.js",
+    "static/js/2.b6a9e35a.chunk.js.map": "/static/js/2.b6a9e35a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b0fef119.chunk.css.map": "/static/css/main.b0fef119.chunk.css.map",
+    "static/js/2.b6a9e35a.chunk.js.LICENSE.txt": "/static/js/2.b6a9e35a.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "/static/media/WithheldData-wVKz.0c162c91.ttf",
+    "static/media/moviePoster.616fb3dc.jpg": "/static/media/moviePoster.616fb3dc.jpg",
+    "static/media/retro.b4d4a0be.png": "/static/media/retro.b4d4a0be.png",
+    "static/media/Background.css": "/static/media/retrobackground.be13efe4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.695f7b2b.js",
+    "static/js/2.b6a9e35a.chunk.js",
+    "static/css/main.b0fef119.chunk.css",
+    "static/js/main.53566a18.chunk.js"
+  ]
+}

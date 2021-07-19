@@ -254,7 +254,7 @@ function FlixNFair() {
                         </div>
                         <div className="py-12 md:pt-8 px-6" >
                             <div className="border border-green-500 border-opacity-100 rounded overflow-hidden shadow-lg md:leading-normal tracking-normal p-4  max-w-6xl mx-auto">
-                                <h1 className="textFont text-center md:text-4xl text-2xl">Some fares that fit with you choice:</h1>                    
+                                <h1 className="textFont text-center md:text-4xl text-2xl">Some fares that fit with your choice:</h1>                    
                                 {fares.map(fare => {
                                     return (
                                         <>
