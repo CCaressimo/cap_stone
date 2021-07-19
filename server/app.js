@@ -34,6 +34,10 @@ app.get('/flix', db.getFlix)
 
 app.get("/flix/:genre", db.getFlixByGenre);
 
+// app.get("/flix/:genre", db.getFlixByMedia);
+
+// app.get("/flix/:mediatype", db.getFlixBySource);
+
 app.post("/register", jsonParser, db.postSignUp)
 
 

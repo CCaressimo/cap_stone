@@ -10,6 +10,8 @@ import Retro from './Images/retro.png'
 function FlixNFair() {
 
     const [flixPick, setFlix] = useState ([])
+    // const [mediaPick, setMedia] = useState ([])
+    // const [sourcePick, setSource] = useState ([])
     const [fares, setFares] = useState ([])
     const [drinks, setDrinks] = useState ([])
 
@@ -43,12 +45,50 @@ function FlixNFair() {
                         setDrinks(json)
                     })
 
-        const flixUrl = `http://localhost:8080/flix/${selectedGenre}?mediatype=${selectedMedia}&streaming_source=${selectedSource}`;
+        let flixUrl = `http://localhost:8080/flix/${selectedGenre}?mediatype=${selectedMedia}&streaming_source=${selectedSource}`;
            fetch(flixUrl)
              .then((res) => res.json())
                .then((json) => {
                     setFlix(json)
                })
+
+
+        // if (selectedGenre && selectedMedia && selectedSource !== null){
+        //     flixUrl = `http://localhost:8080/flix/${selectedGenre}?mediatype=${selectedMedia}&streaming_source=${selectedSource}`
+        //         fetch(flixUrl)
+        //         .then((res) => res.json())
+        //         .then((json) => {
+        //                 setFlix(json)
+        //         })
+        // } else if (selectedGenre && selectedMedia !== null && selectedSource === null){
+        //     flixUrl = `http://localhost:8080/flix/${selectedGenre}?mediatype=${selectedMedia}`
+        //         fetch(flixUrl)
+        //         .then((res) => res.json())
+        //         .then((json) => {
+        //                 setFlix(json)
+        //         })
+        // } else if (selectedGenre === null && selectedMedia && selectedSource !== null){
+        //     flixUrl = `http://localhost:8080/flix/${selectedMedia}&streaming_source=${selectedSource}`
+        //         fetch(flixUrl)
+        //         .then((res) => res.json())
+        //         .then((json) => {
+        //                 setFlix(json)
+        //         })
+        // }
+
+        // const mediaUrl = `http://localhost:8080/flix/${selectedGenre}?mediatype=${selectedMedia}`;
+        //    fetch(mediaUrl)
+        //      .then((res) => res.json())
+        //        .then((json) => {
+        //             setMedia(json)
+        //        })
+
+        // const sourceUrl = `http://localhost:8080/flix/${selectedMedia}&streaming_source=${selectedSource}`;
+        //    fetch(sourceUrl)
+        //      .then((res) => res.json())
+        //        .then((json) => {
+        //             setSource(json)
+        //        })
 
     }
 
@@ -111,7 +151,7 @@ function FlixNFair() {
                                         <option value="Hulu" className="textFont block px-4 py-2 text-sm">Hulu</option>
                                         <option value="Amazon Prime" className="textFont block px-4 py-2 text-sm">Amazon Prime</option>
                                         <option value="HBO Max" className="textFont block px-4 py-2 text-sm">HBO Max</option>
-                                        <option value="Disney+" className="textFont block px-4 py-2 text-sm">Disney+</option>
+                                        <option value="Disney" className="textFont block px-4 py-2 text-sm">Disney+</option>
                                     </select>
                                 </div>
                                 <div className="py-4">
@@ -123,8 +163,9 @@ function FlixNFair() {
                         </div>
                         <div className="py-12 md:pt-8 px-6" >
                             <div className="border border-green-500 border-opacity-100 rounded overflow-hidden shadow-lg md:leading-normal tracking-normal p-4  max-w-6xl mx-auto">
-                                <h1 className="textFont md:text-4xl text-2xl text-center">Here are 5 choices </h1>
-                                {flixPick.slice(0, 5).map(flix => {
+                                <h1 className="textFont md:text-4xl text-2xl text-center">Here are some choices from what you have picked: </h1>
+                                {flixPick.map(flix => {
+                                    // console.log(flix)
                                     return (
                                         <>
                                             <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
@@ -147,12 +188,66 @@ function FlixNFair() {
                                         </>
                                     )
                                 })}
+                                {/* {mediaPick.map(media => {
+                                    console.log(media + 'help')
+                                    return (
+                                        <>
+                                            <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
+                                                <div className="flex-1 rounded overflow-hidden shadow-lg flex h-screen justify-center items-center">
+                                                    <div className="">
+                                                        <img src={media.poster_url} alt=" Movie Poster" className="w-80 object-cover rounded-lg shadow-md " />    
+                                                        <div className="relative px-4 max-w-md">
+                                                            <div className="bg-blue-400  bg-opacity-75 rounded-lg shadow-lg">
+                                                                <div className="mt-1 text-2xl md:text-3xl text-center textFont px-6">
+                                                                    {media.title}
+                                                                </div>
+                                                                <div className="mt-1 text-xl md:text-2xl textFont text-right">
+                                                                    {media.release_date}
+                                                                </div>
+                                                                <div className="mt-1 text-xl md:text-2xl textFont text-right">
+                                                                    {media.streaming_source}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                    )
+                                })}
+                                {sourcePick.map(source => {
+                                    console.log(source + 'help me')
+                                    return (
+                                        <>
+                                            <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
+                                                <div className="flex-1 rounded overflow-hidden shadow-lg flex h-screen justify-center items-center">
+                                                    <div className="">
+                                                        <img src={source.poster_url} alt=" Movie Poster" className="w-80 object-cover rounded-lg shadow-md " />    
+                                                        <div className="relative px-4 max-w-md">
+                                                            <div className="bg-blue-400  bg-opacity-75 rounded-lg shadow-lg">
+                                                                <div className="mt-1 text-2xl md:text-3xl text-center textFont px-6">
+                                                                    {source.title}
+                                                                </div>
+                                                                <div className="mt-1 text-xl md:text-2xl textFont text-right">
+                                                                    {source.genre}
+                                                                </div>
+                                                                <div className="mt-1 text-xl md:text-2xl textFont text-right">
+                                                                    {source.release_date}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </>
+                                    )
+                                })} */}
                             </div>
                         </div>
                         <div className="py-12 md:pt-8 px-6" >
                             <div className="border border-green-500 border-opacity-100 rounded overflow-hidden shadow-lg md:leading-normal tracking-normal p-4  max-w-6xl mx-auto">
-                                <h1 className="textFont text-center md:text-4xl text-2xl">Some fares that fit with you choice</h1>                    
-                                {fares.slice(0, 1).map(fare => {
+                                <h1 className="textFont text-center md:text-4xl text-2xl">Some fares that fit with you choice:</h1>                    
+                                {fares.map(fare => {
                                     return (
                                         <>
                                            <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
@@ -172,7 +267,8 @@ function FlixNFair() {
                                         </>
                                     )
                                 })} 
-                                {drinks.slice(0, 1).map(drink => {
+                                
+                                {drinks.map(drink => {
                                     return (
                                         <>
                                             <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
