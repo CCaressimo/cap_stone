@@ -3,12 +3,12 @@ const bodyParser = require('body-parser')
 const bcrypt = require('bcrypt')
 
 const pool = new Pool({
-  user: 'frasbvsc',
-  host: 'batyr.db.elephantsql.com',
-  database: 'frasbvsc',
-  password: 'aWrjAnvABRS23AynUhv1REWYBoWN8Ixi',
-  port: 5432,
-})
+  user: "frasbvsc",
+  host: "batyr.db.elephantsql.com",
+  database: "frasbvsc",
+  password: "aWrjAnvABRS23AynUhv1REWYBoWN8Ixi",
+  port: process.env.PORT || 5432,
+});
 
 const getFares = (request, response) => {
   pool.query('SELECT * FROM fares', (error, results) => {
