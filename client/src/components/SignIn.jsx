@@ -18,7 +18,7 @@ export default function SignIn() {
                 <div className="w-full md:w-1/2 pl-6 pr-3">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    for="grid-password"
+                    htmlFor="grid-password"
                   ></label>
                   <input
                     className="appearance-none block w-full bg-white text-gray-700 border border-gray-800 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -31,7 +31,7 @@ export default function SignIn() {
                 <div className="w-full md:w-1/2 pr-6 pl-3">
                   <label
                     className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                    for="grid-last-name"
+                    htmlFor="grid-last-name"
                   ></label>
                   <input
                     className="appearance-none block w-full bg-white text-gray-700 border border-gray-800 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
@@ -43,8 +43,8 @@ export default function SignIn() {
                 </div>
               </div>
               <div className="pb-6">
-                <a href="/signup" className="signUpStyle">
-                  Sign up
+                <a href="/" className="signUpStyle">
+                  Not signed up?
                 </a>
               </div>
               <div className="text-center pb-6">
