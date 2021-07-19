@@ -25,3 +25,13 @@ body {
     background-attachment: fixed;
     min-height: 100%;
 }
+
+.moviePoster {
+    width: 400px;
+    height: 600px;
+}
+
+.faresPoster {
+    width: 300px;
+    height: 250px;
+}

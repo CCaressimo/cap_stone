@@ -1,5 +1,6 @@
 const Pool = require('pg').Pool;
 const bodyParser = require('body-parser')
+const bcrypt = require('bcrypt')
 
 const pool = new Pool({
   user: 'frasbvsc',
@@ -107,18 +108,34 @@ let getFlixByGenre = (request, response) => {
 //   );
 // };
 
-const postSignUp = (req, res) => {
+const postSignUp = async (req, res) => {
   console.log(req.body);
-    //let {email, password} = req.body
-    const email = req.body.email;
-    const password = req.body.password;
+  try {
+    const { emailReg } = req.body;
+    const { passwordReg } = req.body;
+    const { firstName } = req.body;
+    const { lastName } = req.body;
+    const newRegister = await pool.query(
+      "INSERT INTO userss (email, password, firstname, lastname) VALUES ($1, $2, $3, $4)",
+      [emailReg, passwordReg, firstName, lastName]
+    );
+    res.json(newRegister.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
+};
 
-  console.log(email);
-  pool.query('INSERT INTO userss (email, password) VALUES ($1, $2)', [email, password])
-  .then(() =>{
-         res.json('SUCCESS')
-  })   
-}
+// const postSignUp = (req, res) => {
+//   console.log(req.body);
+//     //let {email, password} = req.body
+//     const { emailReg } = req.body;
+//     const { passwordReg } = req.body;
+//   console.log({emailReg});
+//   pool.query('INSERT INTO userss (email, password) VALUES ($1, $2)', [emailReg, passwordReg])
+//   .then(() =>{
+//          res.json('SUCCESS')
+//   })
+// }
  
 module.exports = {
   getFares,
@@ -127,8 +144,8 @@ module.exports = {
   getDrinksByGenre,
   getFlix,
   getFlixByGenre,
-  postSignUp
-}
+  postSignUp,
+};
 
   // getFlixByMedia,
   // getFlixBySource,
