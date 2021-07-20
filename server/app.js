@@ -6,6 +6,7 @@ const db = require('./queries');
 const { snack, sequelize } = require("./models");
 const es6Renderer = require("express-es6-template-engine");
 const bodyParser = require('body-parser')
+const path = require('path')
 
 require('dotenv').config()
 

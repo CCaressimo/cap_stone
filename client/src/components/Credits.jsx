@@ -82,11 +82,11 @@ export default function Credits() {
                                 </div>
                                 <div class="text-center px-3 pb-6 pt-2">
                                     <a
-                                        href="https://github.com/CCaressimo/cap_stone" target="_blank">
+                                        href="https://eddies-portfolio.netlify.app/" target="_blank">
                                         <h3 class="dataButton underline text-lg">Eddie</h3>
                                     </a>
                                     <a
-                                        href="https://github.com/CCaressimo/cap_stone" target="_blank">
+                                        href="https://www.linkedin.com/in/eddie-juarez-029164100/" target="_blank">
                                         <h3 class="dataButton underline text-lg">Juarez</h3>
                                     </a>
                                     <p class="textFont2 text-sm mt-4">Back-End, DataBase</p>
@@ -130,6 +130,14 @@ export default function Credits() {
                                         <h3 class="dataButton underline text-lg">Caressimo</h3>
                                     </a>
                                     <p class="textFont2 text-sm mt-4">Scrum Master, Front-End Routing, UI/UX</p>
+                                    <a
+                                        href="https://christophercaressimo.netlify.app" target="_blank">
+                                        <p></p>
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/in/christopheracaressimo/" target="_blank">
+                                        <p></p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
