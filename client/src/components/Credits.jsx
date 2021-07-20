@@ -62,15 +62,17 @@ export default function Credits() {
                                     <img src={Frank} class="rounded-full border-green-500 border-opacity-100 border-2 -mt-3"/>		
                                 </div>
                                 <div class="text-center px-3 pb-6 pt-2">
+                                        <h3 class="dataText text-lg">Frank</h3>
+                                        <h3 class="dataText text-lg">Gomez</h3>
+                                    <p class="textFont2 text-sm mt-4">Front-End, DataBase </p>
                                     <a
                                         href="https://knarf.netlify.app/" target="_blank">
-                                        <h3 class="dataButton underline text-lg">Frank</h3>
+                                        <p class="dataButton underline text-lg">Portfolio</p>
                                     </a>
                                     <a
                                         href="https://www.linkedin.com/in/8Frank8/" target="_blank">
-                                        <h3 class="dataButton underline text-lg">Gomez</h3>
+                                        <p class="dataButton underline text-lg">Linked In</p>
                                     </a>
-                                    <p class="textFont2 text-sm mt-4">Front-End, DataBase </p>
                                 </div>
                             </div>
                         </div>
@@ -81,15 +83,17 @@ export default function Credits() {
                                     <img src={Eddie} class="rounded-full border-green-500 border-opacity-100 border-2 -mt-3"/>		
                                 </div>
                                 <div class="text-center px-3 pb-6 pt-2">
+                                        <h3 class="dataText text-lg">Eddie</h3>
+                                        <h3 class="dataText text-lg">Juarez</h3>
+                                    <p class="textFont2 text-sm mt-4">Back-End, DataBase</p>
                                     <a
                                         href="https://eddies-portfolio.netlify.app/" target="_blank">
-                                        <h3 class="dataButton underline text-lg">Eddie</h3>
+                                        <p class="dataButton underline text-lg">Portfolio</p>
                                     </a>
                                     <a
                                         href="https://www.linkedin.com/in/eddie-juarez-029164100/" target="_blank">
-                                        <h3 class="dataButton underline text-lg">Juarez</h3>
+                                        <p class="dataButton underline text-lg">Linked In</p>
                                     </a>
-                                    <p class="textFont2 text-sm mt-4">Back-End, DataBase</p>
                                 </div>
                             </div>
                         </div>
@@ -102,22 +106,16 @@ export default function Credits() {
                                     <img src={Amanda} class="rounded-full border-green-500 border-opacity-100 border-2 -mt-3"/>		
                                 </div>
                                 <div class="text-center px-3 pb-6 pt-2">
-                                    <a
-                                        href="https://www.amanda-merlin.com" target="_blank">
-                                        <h3 class="dataButton underline text-lg">Amanda</h3>
-                                    </a>
-                                    <a
-                                        href="https://www.linkedin.com/in/amanda-merlin-05106a9b/" target="_blank">
-                                        <h3 class="dataButton underline text-lg">Merlin</h3>
-                                    </a>
+                                        <h3 class="dataText text-lg">Amanda</h3>
+                                        <h3 class="dataText text-lg">Merlin</h3>
                                     <p class="textFont2 text-sm mt-4">Team Lead, Technical Writer, Back-End Routing</p>
                                     <a
-                                        href="https://christophercaressimo.netlify.app" target="_blank">
-                                        <p>Portfolio</p>
+                                        href="https://www.amanda-merlin.com" target="_blank">
+                                        <p class="dataButton underline text-lg">Portfolio</p>
                                     </a>
                                     <a
                                         href="https://www.linkedin.com/in/amanda-merlin-05106a9b/" target="_blank">
-                                        <p>Linked In</p>
+                                        <p class="dataButton underline text-lg">Linked In</p>
                                     </a>
                                 </div>
                             </div>
@@ -129,16 +127,16 @@ export default function Credits() {
                                     <img src={Chris} class="rounded-full border-green-500 border-opacity-100 border-2 -mt-3"/>		
                                 </div>
                                 <div class="text-center px-3 pb-6 pt-2">
-                                        <h3 class="dataButton underline text-lg">Christopher</h3>
-                                        <h3 class="dataButton underline text-lg">Caressimo</h3>
+                                        <h3 class="dataText text-lg">Christopher</h3>
+                                        <h3 class="dataText text-lg">Caressimo</h3>
                                     <p class="textFont2 text-sm mt-4">Scrum Master, Front-End Routing, UI/UX</p>
                                     <a
                                         href="https://christophercaressimo.netlify.app" target="_blank">
-                                        <p>Portfolio</p>
+                                        <p class="dataButton underline text-lg">Portfolio</p>
                                     </a>
                                     <a
                                         href="https://www.linkedin.com/in/christopheracaressimo/" target="_blank">
-                                        <p>Linked In</p>
+                                        <p class="dataButton underline text-lg">Linked In</p>
                                     </a>
                                 </div>
                             </div>
