@@ -11,7 +11,7 @@ export default function SignUp() {
       e.preventDefault();
       try {
         const body = { emailReg, passwordReg, firstName, lastName }
-        const response = await fetch ("http://localhost:8080/register", {
+        const response = await fetch ("http://retro-flixnfares-capstone.herokuapp.com/register", {
         method: "POST",
         headers: {"Content-Type": "application/json" },
         body: JSON.stringify(body)

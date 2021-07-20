@@ -111,6 +111,14 @@ export default function Credits() {
                                         <h3 class="dataButton underline text-lg">Merlin</h3>
                                     </a>
                                     <p class="textFont2 text-sm mt-4">Team Lead, Technical Writer, Back-End Routing</p>
+                                    <a
+                                        href="https://christophercaressimo.netlify.app" target="_blank">
+                                        <p>Portfolio</p>
+                                    </a>
+                                    <a
+                                        href="https://www.linkedin.com/in/amanda-merlin-05106a9b/" target="_blank">
+                                        <p>Linked In</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -121,22 +129,16 @@ export default function Credits() {
                                     <img src={Chris} class="rounded-full border-green-500 border-opacity-100 border-2 -mt-3"/>		
                                 </div>
                                 <div class="text-center px-3 pb-6 pt-2">
-                                    <a
-                                        href="https://christophercaressimo.netlify.app" target="_blank">
                                         <h3 class="dataButton underline text-lg">Christopher</h3>
-                                    </a>
-                                    <a
-                                        href="https://www.linkedin.com/in/christopheracaressimo/" target="_blank">
                                         <h3 class="dataButton underline text-lg">Caressimo</h3>
-                                    </a>
                                     <p class="textFont2 text-sm mt-4">Scrum Master, Front-End Routing, UI/UX</p>
                                     <a
                                         href="https://christophercaressimo.netlify.app" target="_blank">
-                                        <p></p>
+                                        <p>Portfolio</p>
                                     </a>
                                     <a
                                         href="https://www.linkedin.com/in/christopheracaressimo/" target="_blank">
-                                        <p></p>
+                                        <p>Linked In</p>
                                     </a>
                                 </div>
                             </div>
