@@ -53,7 +53,10 @@ export default function SignUp() {
               <hr/>
               {/* <p>By creating an account you agree to our Terms & Privacy.</p> */}
               <div className="text-center pt-6">
-                <button type="submit"  className=" dataButton text-lg md:text-2xl py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">Sign up</button>
+                <a href="/">
+                  <button 
+                  to="/" type="submit"  className=" dataButton text-lg md:text-2xl py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">Sign Up</button>
+                </a>
               </div>
             </div>
               <NavLink 

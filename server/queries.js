@@ -115,9 +115,12 @@ const postSignUp = async (req, res) => {
     const { passwordReg } = req.body;
     const { firstName } = req.body;
     const { lastName } = req.body;
+    const saltRound = 10;
+    const salt = await bcrypt.genSalt(saltRound);
+    const bcryptPassword = await bcrypt.hash(passwordReg, salt);
     const newRegister = await pool.query(
-      "INSERT INTO userss (email, password, firstname, lastname) VALUES ($1, $2, $3, $4)",
-      [emailReg, passwordReg, firstName, lastName]
+      "INSERT INTO userss (email, password, firstname, lastname) VALUES ($1, $2, $3, $4) RETURNING *",
+      [emailReg, bcryptPassword, firstName, lastName]
     );
     res.json(newRegister.rows[0]);
   } catch (err) {
