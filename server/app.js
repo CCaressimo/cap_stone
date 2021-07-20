@@ -1,6 +1,5 @@
 const express = require('express');
 const morgan = require('morgan');
-const helmet = require('helmet');
 const cors = require('cors');
 const app = express();
 const db = require('./queries');
@@ -12,7 +11,7 @@ require('dotenv').config()
 
 var jsonParser = bodyParser.json();
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
-app.use(helmet());
+
 app.use(express.json());
 app.use(cors())
 
