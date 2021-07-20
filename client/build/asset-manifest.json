@@ -1,24 +1,32 @@
 {
   "files": {
-    "main.css": "/static/css/main.b0fef119.chunk.css",
-    "main.js": "/static/js/main.6487af58.chunk.js",
-    "main.js.map": "/static/js/main.6487af58.chunk.js.map",
+    "main.css": "/static/css/main.0f7b75e9.chunk.css",
+    "main.js": "/static/js/main.6308bc4f.chunk.js",
+    "main.js.map": "/static/js/main.6308bc4f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.695f7b2b.js",
     "runtime-main.js.map": "/static/js/runtime-main.695f7b2b.js.map",
-    "static/js/2.b6a9e35a.chunk.js": "/static/js/2.b6a9e35a.chunk.js",
-    "static/js/2.b6a9e35a.chunk.js.map": "/static/js/2.b6a9e35a.chunk.js.map",
+    "static/js/2.b03c0bd8.chunk.js": "/static/js/2.b03c0bd8.chunk.js",
+    "static/js/2.b03c0bd8.chunk.js.map": "/static/js/2.b03c0bd8.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.b0fef119.chunk.css.map": "/static/css/main.b0fef119.chunk.css.map",
-    "static/js/2.b6a9e35a.chunk.js.LICENSE.txt": "/static/js/2.b6a9e35a.chunk.js.LICENSE.txt",
+    "static/css/main.0f7b75e9.chunk.css.map": "/static/css/main.0f7b75e9.chunk.css.map",
+    "static/js/2.b03c0bd8.chunk.js.LICENSE.txt": "/static/js/2.b03c0bd8.chunk.js.LICENSE.txt",
     "static/media/fonts.css": "/static/media/WithheldData-wVKz.0c162c91.ttf",
+    "static/media/amanda.1f1c601a.jfif": "/static/media/amanda.1f1c601a.jfif",
+    "static/media/amandabackground.caf16b0d.jpg": "/static/media/amandabackground.caf16b0d.jpg",
+    "static/media/chris.7e43c55c.jfif": "/static/media/chris.7e43c55c.jfif",
+    "static/media/chrisbackground2.feeddd41.jpg": "/static/media/chrisbackground2.feeddd41.jpg",
+    "static/media/eddie.0d6f3ed3.jfif": "/static/media/eddie.0d6f3ed3.jfif",
+    "static/media/eddiebackground.ea3bd792.jfif": "/static/media/eddiebackground.ea3bd792.jfif",
+    "static/media/frank.69ba3310.jfif": "/static/media/frank.69ba3310.jfif",
+    "static/media/frankbackground.c1febbb6.png": "/static/media/frankbackground.c1febbb6.png",
     "static/media/moviePoster.616fb3dc.jpg": "/static/media/moviePoster.616fb3dc.jpg",
     "static/media/retro.b4d4a0be.png": "/static/media/retro.b4d4a0be.png",
     "static/media/Background.css": "/static/media/retrobackground.be13efe4.png"
   },
   "entrypoints": [
     "static/js/runtime-main.695f7b2b.js",
-    "static/js/2.b6a9e35a.chunk.js",
-    "static/css/main.b0fef119.chunk.css",
-    "static/js/main.6487af58.chunk.js"
+    "static/js/2.b03c0bd8.chunk.js",
+    "static/css/main.0f7b75e9.chunk.css",
+    "static/js/main.6308bc4f.chunk.js"
   ]
 }

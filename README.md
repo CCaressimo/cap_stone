@@ -13,8 +13,15 @@ This is an app that will take a user's login information. It will allow them to 
 
 ## Steps to build server -
 
-* cd into cap_stone/server/
+* cd into cap_stone/
 * npm i 
-* node app.js
+* npm start
 
 Link to Trello - https://trello.com/b/CpAuZh1D/movienight
+
+## Instructions -
+
+* Enter in information to sign up
+* Enter you information to sign in
+* On the home page, use the [Yippee ki yay] button to enter the main site, or use the bottom button to navigate to the credits page.
+* on the Flix page, select a genre, media type, and streaming service, then click the [slime me] button to randomly select 3 movies/shows and some fares that go with the genre you have selected
