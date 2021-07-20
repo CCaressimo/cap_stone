@@ -57,7 +57,7 @@ export default function SignIn() {
                   type="submit"
                   value="Send"
                 >
-                  Log in
+                  WAX ON
                 </NavLink>
               </div>
             </form>

@@ -66,7 +66,7 @@ let getFlixByGenre = (request, response) => {
   let {genre} = request.params
   let {mediatype, streaming_source} = request.query
   pool.query(
-    `SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' AND streaming_source = '${streaming_source}' ORDER BY random() limit 5`,
+    `SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' AND streaming_source = '${streaming_source}' ORDER BY random() limit 3`,
     (error, results) => {
       if (error) {
         throw error;

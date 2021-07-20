@@ -55,7 +55,7 @@ export default function SignUp() {
               <div className="text-center pt-6">
                 <a href="/">
                   <button 
-                  to="/" type="submit"  className=" dataButton text-lg md:text-2xl py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">Sign Up</button>
+                  to="/" type="submit"  className=" dataButton text-lg md:text-2xl py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">I'LL BE BACK!</button>
                 </a>
               </div>
             </div>
