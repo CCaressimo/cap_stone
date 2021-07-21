@@ -11,16 +11,33 @@ const App = () => {
 
   return (
 
-
     <BrowserRouter>
       <Switch>
-        <Route component={SignIn} path="/" exact />
-        <Route component={SignUp} path="/signup" exact />
-        <Route component={Splash} path="/home" exact />
-        <Route component={FlixNFair} path="/FlixNFair" exact />
-        <Route component={Credits} path="/credits" exact />
+        <Route exact path="/">
+          <SignIn />
+        </Route>
+        <Route path="/signup">
+          <SignUp />
+        </Route>
+        <Route path="/home">
+          <Splash />
+        </Route>
+        <Route path="/FlixNFair">
+          <FlixNFair />
+        </Route>
+        <Route path="/credits">
+          <Credits />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
 };
 export default App;
+
+{/* <Switch>
+        <Route component={SignIn} path="/" exact />
+        <Route component={SignUp} path="/signup" exact />
+        <Route component={Splash} path="/home" exact />
+        <Route component={FlixNFair} path="/FlixNFair" exact />
+        <Route component={Credits} path="/credits" exact />
+      </Switch> */}

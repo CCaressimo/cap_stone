@@ -47,7 +47,8 @@ export default function SignIn() {
               </div>
               <div className="text-center pb-6">
                 <NavLink
-                  to="/signup" className="dataButton text-xs md:text-md py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">
+                  to="/signup"
+                  className="dataButton text-xs md:text-md py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">
                   Not signed up?
                 </NavLink>
               </div>

@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function SignUp() {
   const [emailReg, setEmail] = useState("");
   const [passwordReg, setPassword] = useState("");
   const [firstName, setFirstName] =  useState("");
   const [lastName, setLastName] = useState("");
+      let history = useHistory();
   const onSubmitForm = async e => {
       e.preventDefault();
+      //props.onSubmitForm() // the one that comes from your App
+      history.push("/");
       try {
         const body = { emailReg, passwordReg, firstName, lastName }
         const response = await fetch (`${process.env.REACT_APP_SERVER_URL}/register`, {
