@@ -4,7 +4,7 @@
   "description": "This is an app that will take a user's login information. It will allow them to select their streaming services, the amount of time they have available, and a genre they would like to watch. Also, the app will offer the user the option to select restaurants to have meals delivered and generate three random choices from their delivery service area (will work on functionality so that the user can select a specific type of food: ie Mexican, Thai, etc), or they can opt to have the app randomly recommend a snack and/or drink to pair with their experience.",
   "main": "index.js",
   "scripts": {
-    "heroku-prebuild": "cd client && npm install && npm run-script build && mv build ../server/public && cd ../server/ && npm install",
+    "heroku-prebuild": "cd client && npm install && npm run build && mv build ../server/public && cd ../server/ && npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
