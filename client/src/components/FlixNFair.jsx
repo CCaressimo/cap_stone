@@ -31,21 +31,21 @@ function FlixNFair() {
         console.log(selectedMedia)
         console.log(selectedSource)    
 
-        const faresUrl = `http://retro-flixnfares-capstone.herokuapp.com/fares/${selectedGenre}`;
+        const faresUrl = `${process.env.REACT_APP_SERVER_URL}/fares/${selectedGenre}`;
             fetch(faresUrl)
                 .then((res) => res.json())
                     .then((json) => {
                         setFares(json)
                     })
         
-        const drinksUrl = `http://retro-flixnfares-capstone.herokuapp.com/drinks/${selectedGenre}`;
+        const drinksUrl = `${process.env.REACT_APP_SERVER_URL}/drinks/${selectedGenre}`;
             fetch(drinksUrl)
                 .then((res) => res.json())
                     .then((json) => {
                         setDrinks(json)
                     })
 
-        let flixUrl = `http://retro-flixnfares-capstone.herokuapp.com/flix/${selectedGenre}?mediatype=${selectedMedia}&streaming_source=${selectedSource}`;
+        let flixUrl = `${process.env.REACT_APP_SERVER_URL}/flix/${selectedGenre}?mediatype=${selectedMedia}&streaming_source=${selectedSource}`;
            fetch(flixUrl)
              .then((res) => res.json())
                .then((json) => {

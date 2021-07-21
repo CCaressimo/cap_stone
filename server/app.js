@@ -2,19 +2,19 @@ const express = require('express');
 const morgan = require('morgan');
 const cors = require('cors');
 const app = express();
-const db = require('./queries');
-const { snack, sequelize } = require("./models");
 const es6Renderer = require("express-es6-template-engine");
 const bodyParser = require('body-parser')
 const path = require('path')
 
 require('dotenv').config()
+const db = require('./queries');
 
 var jsonParser = bodyParser.json();
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 
 // app.get('/', function (req, res) {
 // res.send('Express application working ...');

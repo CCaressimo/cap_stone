@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-//import Axios from 'axios'
 
 export default function SignUp() {
   const [emailReg, setEmail] = useState("");
@@ -11,7 +10,7 @@ export default function SignUp() {
       e.preventDefault();
       try {
         const body = { emailReg, passwordReg, firstName, lastName }
-        const response = await fetch ("http://retro-flixnfares-capstone.herokuapp.com/register", {
+        const response = await fetch (`${process.env.REACT_APP_SERVER_URL}/register`, {
         method: "POST",
         headers: {"Content-Type": "application/json" },
         body: JSON.stringify(body)
@@ -21,11 +20,7 @@ export default function SignUp() {
           console.error(err.message);
       }
   };
-  // const register = () => {
-  //     Axios.post ("http://localhost8080/register", {email: emailReg, password: passwordReg}).then((response)=> {
-  //       console.log(response)
-  //     });
-  //   };
+
   return (
     <main className="leading-normal tracking-normal">
       <section className="relative">
