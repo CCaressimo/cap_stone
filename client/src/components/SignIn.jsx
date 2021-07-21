@@ -46,9 +46,10 @@ export default function SignIn() {
                 </div>
               </div>
               <div className="text-center pb-6">
-                <a href="/signup" className="dataButton text-xs md:text-md py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">
+                <NavLink
+                  to="/signup" className="dataButton text-xs md:text-md py-2 px-4 shadow border border-green-500 border-opacity-100 rounded">
                   Not signed up?
-                </a>
+                </NavLink>
               </div>
               <div className="text-center pb-6">
                 <NavLink
