@@ -50,7 +50,6 @@ export default function SignUp() {
               <label htmlFor="psw" className="text-2xl textFont"><h1 className="pt-2">Password</h1> </label>
               <input type="Password" placeholder="Enter Password" onChange={e => setPassword(e.target.value)} className="textFont2 text-lg bg-blue-400 bg-opacity-70 border border-green-500 border-opacity-100 rounded block w-full p-3 mt-2 mb-4"/>
               <hr/>
-              {/* <p>By creating an account you agree to our Terms & Privacy.</p> */}
               <div className="text-center pt-6">
                 <a href="/">
                   <button 

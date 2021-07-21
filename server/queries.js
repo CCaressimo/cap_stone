@@ -76,38 +76,6 @@ let getFlixByGenre = (request, response) => {
   );
 }
 
-// `SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' AND streaming_source = '${streaming_source}'`
-
-// `SELECT * genre, mediatype, streaming_source FROM flix (CASE WHEN genre AND mediatype AND streaming_source IS NOT NULL THEN SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' AND streaming_source = '${streaming_source}' WHEN genre AND mediatype IS NOT NULL AND streaming_source IS NULL THEN SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}' WHEN genre IS NULL AND mediatype AND streaming_source IS NOT NULL THEN SELECT * FROM flix WHERE mediatype = '${mediatype}' AND streaming_source = '${streaming_source}' END)`;
-
-// const getFlixByMedia = (request, response) => {
-//   let { genre } = request.params;
-//   let { mediatype } = request.query;
-//   pool.query(
-//     `SELECT * FROM flix WHERE genre = '${genre}' AND mediatype = '${mediatype}'`,
-//     (error, results) => {
-//       if (error) {
-//         throw error;
-//       }
-//       response.status(200).json(results.rows);
-//     }
-//   );
-// };
-
-// const getFlixBySource = (request, response) => {
-//   let { mediatype } = request.params;
-//   let { streaming_source } = request.query;
-//   pool.query(
-//     `SELECT * FROM flix WHERE mediatype = '${mediatype}' AND streaming_source = '${streaming_source}'`,
-//     (error, results) => {
-//       if (error) {
-//         throw error;
-//       }
-//       response.status(200).json(results.rows);
-//     }
-//   );
-// };
-
 const postSignUp = async (req, res) => {
   console.log(req.body);
   try {
@@ -127,18 +95,6 @@ const postSignUp = async (req, res) => {
     console.error(err.message);
   }
 };
-
-// const postSignUp = (req, res) => {
-//   console.log(req.body);
-//     //let {email, password} = req.body
-//     const { emailReg } = req.body;
-//     const { passwordReg } = req.body;
-//   console.log({emailReg});
-//   pool.query('INSERT INTO userss (email, password) VALUES ($1, $2)', [emailReg, passwordReg])
-//   .then(() =>{
-//          res.json('SUCCESS')
-//   })
-// }
  
 module.exports = {
   getFares,
@@ -149,6 +105,3 @@ module.exports = {
   getFlixByGenre,
   postSignUp,
 };
-
-  // getFlixByMedia,
-  // getFlixBySource,

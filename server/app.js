@@ -16,10 +16,6 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.json());
 app.use(cors());
 
-// app.get('/', function (req, res) {
-// res.send('Express application working ...');
-// });
-
 app.get('/fares', db.getFares)
 
 app.get('/drinks', db.getDrinks)
@@ -31,10 +27,6 @@ app.get("/fares/:genre", db.getFaresByGenre);
 app.get('/flix', db.getFlix)
 
 app.get("/flix/:genre", db.getFlixByGenre);
-
-// app.get("/flix/:genre", db.getFlixByMedia);
-
-// app.get("/flix/:mediatype", db.getFlixBySource);
 
 app.post("/register", jsonParser, db.postSignUp)
 

@@ -10,16 +10,10 @@ import Retro from './Images/retro.png'
 function FlixNFair() {
 
     const [flixPick, setFlix] = useState ([])
-    // const [mediaPick, setMedia] = useState ([])
-    // const [sourcePick, setSource] = useState ([])
     const [fares, setFares] = useState ([])
     const [drinks, setDrinks] = useState ([])
 
     function processFlix() {
-        // validate default or choice selected in genere and type
-        // assume check both are selected and not the default value
-        
-        //retrieve selected items from user
         const genreType = document.getElementById('genreType');
         const mediaType = document.getElementById('mediaType');
         const streamingSource = document.getElementById('streamingSource');
@@ -51,45 +45,6 @@ function FlixNFair() {
                .then((json) => {
                     setFlix(json)
                })
-
-
-        // if (selectedGenre && selectedMedia && selectedSource !== null){
-        //     flixUrl = `http://localhost:8080/flix/${selectedGenre}?mediatype=${selectedMedia}&streaming_source=${selectedSource}`
-        //         fetch(flixUrl)
-        //         .then((res) => res.json())
-        //         .then((json) => {
-        //                 setFlix(json)
-        //         })
-        // } else if (selectedGenre && selectedMedia !== null && selectedSource === null){
-        //     flixUrl = `http://localhost:8080/flix/${selectedGenre}?mediatype=${selectedMedia}`
-        //         fetch(flixUrl)
-        //         .then((res) => res.json())
-        //         .then((json) => {
-        //                 setFlix(json)
-        //         })
-        // } else if (selectedGenre === null && selectedMedia && selectedSource !== null){
-        //     flixUrl = `http://localhost:8080/flix/${selectedMedia}&streaming_source=${selectedSource}`
-        //         fetch(flixUrl)
-        //         .then((res) => res.json())
-        //         .then((json) => {
-        //                 setFlix(json)
-        //         })
-        // }
-
-        // const mediaUrl = `http://localhost:8080/flix/${selectedGenre}?mediatype=${selectedMedia}`;
-        //    fetch(mediaUrl)
-        //      .then((res) => res.json())
-        //        .then((json) => {
-        //             setMedia(json)
-        //        })
-
-        // const sourceUrl = `http://localhost:8080/flix/${selectedMedia}&streaming_source=${selectedSource}`;
-        //    fetch(sourceUrl)
-        //      .then((res) => res.json())
-        //        .then((json) => {
-        //             setSource(json)
-        //        })
-
     }
 
 
@@ -204,60 +159,6 @@ function FlixNFair() {
                                         </>
                                     )
                                 })}
-                                {/* {mediaPick.map(media => {
-                                    console.log(media + 'help')
-                                    return (
-                                        <>
-                                            <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
-                                                <div className="flex-1 rounded overflow-hidden shadow-lg flex h-screen justify-center items-center">
-                                                    <div className="">
-                                                        <img src={media.poster_url} alt=" Movie Poster" className="w-80 object-cover rounded-lg shadow-md " />    
-                                                        <div className="relative px-4 max-w-md">
-                                                            <div className="bg-blue-400  bg-opacity-75 rounded-lg shadow-lg">
-                                                                <div className="mt-1 text-2xl md:text-3xl text-center textFont px-6">
-                                                                    {media.title}
-                                                                </div>
-                                                                <div className="mt-1 text-xl md:text-2xl textFont text-right">
-                                                                    {media.release_date}
-                                                                </div>
-                                                                <div className="mt-1 text-xl md:text-2xl textFont text-right">
-                                                                    {media.streaming_source}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </>
-                                    )
-                                })}
-                                {sourcePick.map(source => {
-                                    console.log(source + 'help me')
-                                    return (
-                                        <>
-                                            <div className="w-full p-6 flex flex-col flex-grow flex-shrink">
-                                                <div className="flex-1 rounded overflow-hidden shadow-lg flex h-screen justify-center items-center">
-                                                    <div className="">
-                                                        <img src={source.poster_url} alt=" Movie Poster" className="w-80 object-cover rounded-lg shadow-md " />    
-                                                        <div className="relative px-4 max-w-md">
-                                                            <div className="bg-blue-400  bg-opacity-75 rounded-lg shadow-lg">
-                                                                <div className="mt-1 text-2xl md:text-3xl text-center textFont px-6">
-                                                                    {source.title}
-                                                                </div>
-                                                                <div className="mt-1 text-xl md:text-2xl textFont text-right">
-                                                                    {source.genre}
-                                                                </div>
-                                                                <div className="mt-1 text-xl md:text-2xl textFont text-right">
-                                                                    {source.release_date}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </>
-                                    )
-                                })} */}
                             </div>
                         </div>
                         <div className="py-12 md:pt-8 px-6" >
