@@ -1,8 +1,8 @@
-# Movie Night* CapStone Project
+# Retro Flix-n-Fares CapStone Project
 
 ## About the App -
 
-This is an app that will take a user's login information. It will allow them to select their streaming services, the amount of time they have available, and a genre they would like to watch. Also, the app will offer the user the option to select restaurants to have meals delivered and generate three random choices from their delivery service area (will work on functionality so that the user can select a specific type of food: ie Mexican, Thai, etc), or they can opt to have the app randomly recommend a snack and/or drink to pair with their experience.
+This is the first iteration of an idea that was bornduring quarantine. Our current app takes the choice paralysis and timefrom searching for your favorite nostalgicfavorites across streaming services. The app in itscurrent iteration allows a user to create anaccount, select current streaming services, genre,and the type of feature (movie or TV series).Retro Flix-n-Fares returns 5 selections based on thecriteria along with suggested food anddrink to enjoy with your feature.
 
 ## App Presentation -
 
